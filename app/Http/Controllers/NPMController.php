@@ -14,7 +14,7 @@ class NPMController extends Controller
      */
     public function index()
     {
-       $cast = Cast::all();
+       $npm= Npm::all();
        return view('npm.index',compact('npm'));
     }
 
@@ -37,19 +37,19 @@ class NPMController extends Controller
      */
     public function store(Request $request)
     {
-        $cast = new Cast;
+        $npm = new Npm;
 
         $request->validate([
+            'npm' => 'required',
             'nama' => 'required',
-            'umur' => 'required',
-            'bio' => 'required',
+            'alamat' => 'required',
         ]);
 
-        $cast->nama = $request->nama;
-        $cast->umur = $request->umur;
-        $cast->bio = $request->bio;
+        $npm->npm = $request->npm;
+        $npm->nama = $request->nama;
+        $npm->alamat = $request->alamat;
 
-        $simpan = $cast->save();
+        $simpan = $npm->save();
 
         if($simpan){
             Alert::success('Success', 'Data Berhasil ditambah');

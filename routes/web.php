@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\CastController;
-use App\Http\Controllers\FilmController;
+use App\Http\Controllers\NPMController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +35,7 @@ Route::get('/home', function () {
 Route::get('/forminput', [PagesController::class,'FormInput']);
 Route::post('/welcome', [PagesController::class,'Welcome']);
 
-// CRUD CAST
+// CRUD Mahasiswa
 Route::get('/npm', [NPMController::class,'index']);
 Route::get('/npm/create', [NPMController::class,'create']);
 Route::post('/npm', [NPMController::class,'store']);

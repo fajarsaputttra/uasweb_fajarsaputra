@@ -18,7 +18,7 @@
 @endpush
 
 @section('content')
-<a class="btn btn-secondary mb-3" href="/cast/create">Tambah Data</a>
+<a class="btn btn-secondary mb-3" href="/npm/create">Tambah Data</a>
 <table class="table" id="example1">
     <thead class="thead-dark">
       <tr>
